@@ -26,7 +26,7 @@ void handleAction(tree* root) {
 	int numberToRemove;
 	int elementToSearch;
 
-	printf("\nPlease text back action you want to perform with your binary tree:\n0 - add;\n1 - remove single element;\n2 - remove all elements;\n3 - find specific element;\n4 - print preorder;\n5 - print inorder;\n6 - print postorder;\n7 - print levelorder;\n8 - finish your work\n");
+	printf("\nPlease text back action you want to perform with your binary tree:\n0 - add;\n1 - remove elements;\n2 - remove all elements;\n3 - find specific element;\n4 - print preorder;\n5 - print inorder;\n6 - print postorder;\n7 - print levelorder;\n8 - finish your work\n");
 
 	scanf("%d", &act);
 
