@@ -39,8 +39,6 @@ int getNumber() {
 
 void handleAction(tree* root) {
 	enum action act;
-	char buf[2];
-	int ret;
 	int numberToAdd = 0;
 	int numberToRemove = 0;
 	int elementToSearch;
