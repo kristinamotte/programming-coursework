@@ -143,6 +143,4 @@ void handleAction(tree* root) {
 		handleAction(root);
 		break;
 	}
-
-	getchar();
 }
