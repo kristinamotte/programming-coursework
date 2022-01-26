@@ -2,12 +2,13 @@
 
 enum action {
     add = 0,
-    removeElement = 1,
-    removeAll = 2,
-    searchElement = 3,
-    printPreorder = 4,
-    printInorder = 5,
-    printPostorder = 6,
-    sumOfAllNodes = 7,
-    finishWork = 8
+    addFromFile = 1,
+    removeElement = 2,
+    removeAll = 3,
+    searchElement = 4,
+    printPreorder = 5,
+    printInorder = 6,
+    printPostorder = 7,
+    sumOfAllNodes = 8,
+    finishWork = 9
 };

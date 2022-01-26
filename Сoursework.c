@@ -12,6 +12,7 @@
 
 void handleAction(tree*);
 int getNumber();
+void scanFromFile(int[], int);
 
 int main(int argc, char const *argv[]) {
 	tree* root = NULL;
@@ -37,13 +38,27 @@ int getNumber() {
    return number;
 }
 
+void scanFromFile(int array[], int size) {
+    FILE *ifp;
+    ifp = fopen("Keys.txt", "r");
+
+    for (int i = 0; i < size; i++) {
+        fscanf(ifp, "%d", &array[i]);
+    }
+
+    fclose(ifp);
+}
+
 void handleAction(tree* root) {
 	enum action act;
 	int numberToAdd = 0;
 	int numberToRemove = 0;
 	int elementToSearch;
+	char *fname;
+	int numberOfElements = 0;
+	int arrOfKeys[1000];
 
-	printf("\nPlease text back action you want to perform with your binary tree:\n0 - add;\n1 - remove elements;\n2 - remove all elements;\n3 - find specific element;\n4 - print preorder;\n5 - print inorder;\n6 - print postorder;\n7 - sum of all nodes;\n8 - finish your work\n");
+	printf("\nPlease text back action you want to perform with your binary tree:\n0 - add manually;\n1 - add from file,\n2 - remove single element;\n3 - remove all elements;\n4 - find specific element;\n5 - print preorder;\n6 - print inorder;\n7 - print postorder;\n8 - print levelorder;\n9 - finish your work\n");
 
 	act = getNumber();
 
@@ -61,6 +76,25 @@ void handleAction(tree* root) {
 			root = addNode(root, key);
 		}
 		
+		handleAction(root);
+		break;
+
+		case addFromFile:
+		printf("\nPlease enter how much elements you have in the file\n");
+		numberOfElements = getNumber();
+
+		if (numberOfElements > 1000) {
+			printf("\nMax number of key's can't be more than 1000. \n");
+			handleAction(root);
+			break;
+		}
+
+		scanFromFile(arrOfKeys, numberOfElements);
+
+		for (int i = 0; i < numberOfElements; i++) {
+        	root = addNode(root, arrOfKeys[i]);
+    	}
+
 		handleAction(root);
 		break;
 
