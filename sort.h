@@ -1,5 +1,5 @@
 #include "sort.c"
 
-void preorder(tree*); 
-void inorder(tree*); 
-void postorder(tree*);
+void preorder(trunk*, tree*, int); 
+void inorder(trunk*, tree*, int); 
+void postorder(trunk*, tree*, int);

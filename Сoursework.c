@@ -58,7 +58,7 @@ void handleAction(tree* root) {
 	int numberOfElements = 0;
 	int arrOfKeys[1000];
 
-	printf("\nPlease text back action you want to perform with your binary tree:\n0 - add manually;\n1 - add from file,\n2 - remove single element;\n3 - remove all elements;\n4 - find specific element;\n5 - print preorder;\n6 - print inorder;\n7 - print postorder;\n8 - print levelorder;\n9 - finish your work\n");
+	printf("\nPlease text back action you want to perform with your binary tree:\n0 - add manually;\n1 - add from file,\n2 - remove single element;\n3 - remove all elements;\n4 - find specific element;\n5 - print preorder;\n6 - print inorder;\n7 - print postorder;\n8 - sum of all nodes;\n9 - finish your work\n");
 
 	act = getNumber();
 
@@ -138,7 +138,7 @@ void handleAction(tree* root) {
 		
 		case printPreorder:
 		printf("\n========PREORDER========\n");
-		preorder(root);
+		preorder(NULL, root, 0);
 		printf("\n========================\n");
 
 		handleAction(root);
@@ -146,7 +146,7 @@ void handleAction(tree* root) {
 
 		case printInorder:
 		printf("\n========INORDER========\n");
-		inorder(root);
+		inorder(NULL, root, 0);
 		printf("\n========================\n");
 
 		handleAction(root);
@@ -154,7 +154,7 @@ void handleAction(tree* root) {
 
 		case printPostorder:
 		printf("\n========POSTORDER========\n");
-		postorder(root);
+		postorder(NULL, root, 0);
 		printf("\n========================\n");
 
 		handleAction(root);
