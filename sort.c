@@ -106,6 +106,5 @@ void postorder(trunk *prev, tree* root, int isLeft) {
     	}
 
     	trunkEx->str = "   |";
-
 	}
 }

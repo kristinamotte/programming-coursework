@@ -54,7 +54,6 @@ void handleAction(tree* root) {
 	int numberToAdd = 0;
 	int numberToRemove = 0;
 	int elementToSearch;
-	char *fname;
 	int numberOfElements = 0;
 	int arrOfKeys[1000];
 
