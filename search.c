@@ -2,7 +2,12 @@
 
 tree* search(tree* root, int key) {
     // Дефолтный кейс: root пустой или ключ такой же ка значение root
-    if (root == NULL || root->key == key) {
+    if (root == NULL) {
+        printf("\nThe tree is empty\n");
+        return root;
+    }
+
+    if (root->key == key) {
         printf("\nThe key has found! %d\n", key);
         return root;
     }
