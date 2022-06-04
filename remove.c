@@ -17,7 +17,7 @@ tree* minValueNode(tree* node) {
    удаляет ключ и возвращает новый root */
 tree* deleteNode(tree* root, int key) {
     if (root == NULL) {
-		printf("\nThe tree is empty, nothing to remove\n");
+		printf("\nThe tree doesn't contain such key\n");
         return root;
 	}
 	
